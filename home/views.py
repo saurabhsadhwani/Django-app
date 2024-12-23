@@ -7,7 +7,6 @@ def index(request):
     context={
         'request':'request'
     }
-    messages.success(request,'this is test message')
     return render(request,'index.html')
 def about(request):
     return render(request,'about.html')
