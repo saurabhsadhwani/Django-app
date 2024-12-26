@@ -1,13 +1,24 @@
 {% extends "base.html" %}
-{% block title %}Home{% endblock title %}
+{% block title %}{{request.user}}{% endblock title %}
 {% block body %}
 {% load static %}
+<div class="flex-column text-center">
+    <div >
+        <button class="btn btn-outline-success active "  onclick="location.href='/logout'" type="submit">Logout</button>
+        
+        <div>
+    Welcome {{request.user}}
+
+</div>
+
 
 <div class="container-flex  ">
+
     <div id="carouselExampleIndicators" class="carousel slide">
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
             <div class="carousel-inner">
                 <div class="carousel-item active">
+
                     <img src="/static/p1.jpg" height=500 width=300 class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
@@ -170,7 +181,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary">Buy</button>
-                            
+
                         </div>
                         <small class="text-body-secondary">9 mins</small>
                     </div>
